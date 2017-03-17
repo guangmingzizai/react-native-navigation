@@ -8,6 +8,10 @@ import {
 } from 'react-native';
 
 export default class LightBoxScreen extends Component {
+  static navigatorStyle = {
+    navBarHidden: true,
+  };
+
   constructor(props) {
     super(props);
   }

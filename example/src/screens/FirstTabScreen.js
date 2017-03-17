@@ -74,7 +74,7 @@ export default class FirstTabScreen extends Component {
         </TouchableOpacity>
 
         {
-          Platform.OS === 'ios' ?
+          true || Platform.OS === 'ios' ?
             <TouchableOpacity onPress={ this.onLightBoxPress.bind(this) }>
               <Text style={styles.button}>Show LightBox</Text>
             </TouchableOpacity> : false

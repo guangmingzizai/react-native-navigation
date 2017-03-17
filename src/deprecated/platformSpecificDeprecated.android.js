@@ -401,6 +401,21 @@ function dismissAllModals(params) {
   newPlatformSpecific.dismissAllModals();
 }
 
+function showLightBox(params) {
+  if (!params.screen) {
+    console.error('showLightBox(params): params.screen is required');
+    return;
+  }
+  showModal(Object.assign({}, params, {
+    animationType: 'none',
+    backButtonHidden: true,
+  }))
+}
+
+function dismissLightBox(params) {
+  dismissModal()
+}
+
 function showInAppNotification(params) {
   params.navigationParams = {};
   addNavigatorParams(params.navigationParams);
@@ -623,6 +638,8 @@ export default {
   showModal,
   dismissModal,
   dismissAllModals,
+  showLightBox,
+  dismissLightBox,
   showInAppNotification,
   dismissInAppNotification,
   navigatorSetButtons,

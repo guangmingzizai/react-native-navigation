@@ -84,3 +84,14 @@ tabsStyle: {
 #### 3. Support tabBarItem no title
 
 If the title of tabBarItem is empty, it will not show title.
+
+#### 4. Support remove the tabBar top border line
+
+```javascript
+tabsStyle: {
+    removeBorderLine: true,
+}
+```
+
+*must set the backgroundColor*
+

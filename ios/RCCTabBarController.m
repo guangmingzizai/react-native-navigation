@@ -55,6 +55,25 @@
   return newImage;
 }
 
+- (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size
+{
+  if ((size.height == 0 || size.width == 0)) {
+    return nil;
+  }
+  
+  CGRect rect = CGRectMake(0, 0, size.width, size.height);
+  UIGraphicsBeginImageContext(rect.size);
+  CGContextRef context = UIGraphicsGetCurrentContext();
+  
+  CGContextSetFillColorWithColor(context, [color CGColor]);
+  CGContextFillRect(context, rect);
+  
+  UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
+  
+  return image;
+}
+
 - (instancetype)initWithProps:(NSDictionary *)props children:(NSArray *)children globalProps:(NSDictionary*)globalProps bridge:(RCTBridge *)bridge
 {
   self = [super init];
@@ -86,11 +105,26 @@
       selectedButtonColor = color;
     }
 
+    NSNumber *removeBorderLine = tabsStyle[@"removeBorderLine"];
     NSString *tabBarBackgroundColor = tabsStyle[@"tabBarBackgroundColor"];
     if (tabBarBackgroundColor)
     {
       UIColor *color = tabBarBackgroundColor != (id)[NSNull null] ? [RCTConvert UIColor:tabBarBackgroundColor] : nil;
-      self.tabBar.barTintColor = color;
+      if (color && removeBorderLine.boolValue) {
+        self.tabBar.backgroundImage = [self imageWithColor:color size:CGSizeMake([UIScreen mainScreen].bounds.size.width, 49)];
+      } else {
+        self.tabBar.barTintColor = color;
+      }
+    }
+    
+    NSString *shadowImageColor = tabsStyle[@"shadowImageColor"];
+    if (removeBorderLine.boolValue) {
+      self.tabBar.shadowImage = [UIImage new];
+    } else if (shadowImageColor) {
+      UIColor *color = shadowImageColor != (id)[NSNull null] ? [RCTConvert UIColor:shadowImageColor] : nil;
+      if (color) {
+        self.tabBar.shadowImage = [self imageWithColor:color size:CGSizeMake([UIScreen mainScreen].bounds.size.width * [UIScreen mainScreen].scale, 1)];
+      }
     }
     
     NSNumber *animateTabBarItem = tabsStyle[@"animateTabBarItem"];

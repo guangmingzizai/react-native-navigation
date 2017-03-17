@@ -51,6 +51,7 @@ Navigation.startTabBasedApp({
     }
   },
   tabsStyle: {
+    tabBarBackgroundColor: 'white',
     animateTabBarItem: false,
   },
 });

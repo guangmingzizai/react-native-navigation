@@ -114,3 +114,18 @@ this.props.navigator.setTabBadge({
 });
 ```
 
+#### 7. Use showModal for android showLightBox
+
+Now `showLightBox` only support iOS, so add `showLightBox` to android for convenience.
+
+#### 8. Add default style to lightBox
+
+Default style is:
+
+```javascript
+ {
+      backgroundBlur: "none",
+      backgroundColor: "transparent",
+    }
+```
+

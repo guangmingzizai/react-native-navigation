@@ -471,6 +471,12 @@ function showLightBox(params) {
     console.error('showLightBox(params): params.screen is required');
     return;
   }
+  if (!params.style) {
+    params.style = {
+      backgroundBlur: "none",
+      backgroundColor: "transparent",
+    }
+  }
   const controllerID = _.uniqueId('controllerID');
   const navigatorID = controllerID + '_nav';
   const screenInstanceID = _.uniqueId('screenInstanceID');

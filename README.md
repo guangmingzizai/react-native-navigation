@@ -95,3 +95,22 @@ tabsStyle: {
 
 *must set the backgroundColor*
 
+#### 5. Support change the top border color
+
+```javascript
+tabsStyle: {
+    shadowImageColor: '#555555',
+}
+```
+
+#### 6. Support change badge color
+
+```javascript
+this.props.navigator.setTabBadge({
+  tabIndex: 0, // (optional) if missing, the badge will be added to this screen's tab
+  badge: 17, // badge value, null to remove badge
+  showBadgeDot: true,
+  badgeColor: 'green',
+});
+```
+

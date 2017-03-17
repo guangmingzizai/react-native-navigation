@@ -8,6 +8,9 @@ const {
   NavigationControllerIOS,
   DrawerControllerIOS
 } = React;
+var OriginalReactNative = require('react-native');
+var processColor = OriginalReactNative.processColor;
+
 import _ from 'lodash';
 
 import PropRegistry from '../PropRegistry';
@@ -362,6 +365,7 @@ function navigatorSetTabBadge(navigator, params) {
       tabIndex: params.tabIndex,
       badge: params.badge,
       showBadgeDot: params.showBadgeDot,
+      badgeColor: processColor(params.badgeColor),
     });
   } else {
     Controllers.TabBarControllerIOS(controllerID + '_tabs').setBadge({
@@ -369,6 +373,7 @@ function navigatorSetTabBadge(navigator, params) {
       contentType: 'NavigationControllerIOS',
       badge: params.badge,
       showBadgeDot: params.showBadgeDot,
+      badgeColor: processColor(params.badgeColor),
     });
   }
 }

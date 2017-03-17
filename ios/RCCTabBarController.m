@@ -188,6 +188,13 @@
     }
     
     [viewController.tabBarItem setTitleTextAttributes:selectedAttributes forState:UIControlStateSelected];
+    
+    NSString *badgeColorString = tabItemLayout[@"props"][@"badgeColor"];
+    if (badgeColorString && [viewController.tabBarItem respondsToSelector:@selector(setBadgeColor:)])
+    {
+      viewController.tabBarItem.badgeColor = [RCTConvert UIColor:badgeColorString];
+    }
+    
     // create badge
     NSObject *badge = tabItemLayout[@"props"][@"badge"];
     if (badge == nil || [badge isEqual:[NSNull null]])
@@ -244,6 +251,12 @@
 
     if (viewController)
     {
+      NSString *badgeColorString = actionParams[@"badgeColor"];
+      if (badgeColorString && [viewController.tabBarItem respondsToSelector:@selector(setBadgeColor:)])
+      {
+        viewController.tabBarItem.badgeColor = [RCTConvert UIColor:badgeColorString];
+      }
+      
       NSObject *badge = actionParams[@"badge"];
 
       if (badge == nil || [badge isEqual:[NSNull null]])

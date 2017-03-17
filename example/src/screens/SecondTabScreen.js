@@ -93,8 +93,9 @@ export default class SecondTabScreen extends Component {
   }
   onSetTabBadgePress() {
     this.props.navigator.setTabBadge({
-      // badge: 12,
-      showBadgeDot: true,
+      badge: 12,
+      badgeColor: 'green',
+      // showBadgeDot: true,
     });
   }
   onToggleTabsPress() {

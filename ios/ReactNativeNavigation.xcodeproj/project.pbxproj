@@ -11,6 +11,7 @@
 		261108801E6C495400BF5D98 /* UIViewController+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2611087F1E6C495400BF5D98 /* UIViewController+Rotation.m */; };
 		26AFF3F51D7EEE2400CBA211 /* RCCTitleViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AFF3F41D7EEE2400CBA211 /* RCCTitleViewHelper.m */; };
 		6C0347041E7BA47800B7540C /* UITabBar+RCCBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0347031E7BA47800B7540C /* UITabBar+RCCBadge.m */; };
+		6C0347491E7BCD1A00B7540C /* UITabBar+RCCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0347481E7BCD1A00B7540C /* UITabBar+RCCAnimation.m */; };
 		CC84A19E1C1A0C4E00B3A6A2 /* RCCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1941C1A0C4E00B3A6A2 /* RCCManager.m */; };
 		CC84A19F1C1A0C4E00B3A6A2 /* RCCManagerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1961C1A0C4E00B3A6A2 /* RCCManagerModule.m */; };
 		CC84A1A01C1A0C4E00B3A6A2 /* RCCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1981C1A0C4E00B3A6A2 /* RCCNavigationController.m */; };
@@ -58,6 +59,8 @@
 		26AFF3F41D7EEE2400CBA211 /* RCCTitleViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCTitleViewHelper.m; sourceTree = "<group>"; };
 		6C0347021E7BA47800B7540C /* UITabBar+RCCBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+RCCBadge.h"; sourceTree = "<group>"; };
 		6C0347031E7BA47800B7540C /* UITabBar+RCCBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RCCBadge.m"; sourceTree = "<group>"; };
+		6C0347471E7BCD1A00B7540C /* UITabBar+RCCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+RCCAnimation.h"; sourceTree = "<group>"; };
+		6C0347481E7BCD1A00B7540C /* UITabBar+RCCAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RCCAnimation.m"; sourceTree = "<group>"; };
 		CC84A1931C1A0C4E00B3A6A2 /* RCCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCManager.h; sourceTree = "<group>"; };
 		CC84A1941C1A0C4E00B3A6A2 /* RCCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = RCCManager.m; sourceTree = "<group>"; tabWidth = 2; };
 		CC84A1951C1A0C4E00B3A6A2 /* RCCManagerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCManagerModule.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 			children = (
 				6C0347021E7BA47800B7540C /* UITabBar+RCCBadge.h */,
 				6C0347031E7BA47800B7540C /* UITabBar+RCCBadge.m */,
+				6C0347471E7BCD1A00B7540C /* UITabBar+RCCAnimation.h */,
+				6C0347481E7BCD1A00B7540C /* UITabBar+RCCAnimation.m */,
 			);
 			path = RCCTabBar;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				D85082EA1CBCF54200FDB961 /* TheSidebarController.m in Sources */,
 				CC84A1A01C1A0C4E00B3A6A2 /* RCCNavigationController.m in Sources */,
 				D83514F61D29719A00D53758 /* RCCNotification.m in Sources */,
+				6C0347491E7BCD1A00B7540C /* UITabBar+RCCAnimation.m in Sources */,
 				CC84A19F1C1A0C4E00B3A6A2 /* RCCManagerModule.m in Sources */,
 				26AFF3F51D7EEE2400CBA211 /* RCCTitleViewHelper.m in Sources */,
 				D8D779981D04B7180050CFEA /* RCTHelpers.m in Sources */,

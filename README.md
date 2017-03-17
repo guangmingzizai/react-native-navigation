@@ -56,3 +56,18 @@ For example, this package replaces the native [NavigatorIOS](https://facebook.gi
 The MIT License.
 
 See [LICENSE](LICENSE)
+
+## Customization
+
+#### 1. Add badgeDot to tabBarItem
+
+```javascript
+this.props.navigator.setTabBadge({
+  tabIndex: 0, // (optional) if missing, the badge will be added to this screen's tab
+  badge: 17, // badge value, null to remove badge
+  showBadgeDot: true,
+});
+```
+
+*If badge exists, the badgeDot is hidden.*
+

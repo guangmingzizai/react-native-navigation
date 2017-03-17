@@ -6,6 +6,7 @@
 #import <React/RCTUIManager.h>
 #import "UIViewController+Rotation.h"
 #import "UITabBar+RCCBadge.h"
+#import "UITabBar+RCCAnimation.h"
 
 @interface RCTUIManager ()
 
@@ -15,8 +16,10 @@
 
 @end
 
-@implementation RCCTabBarController
-
+@implementation RCCTabBarController {
+  NSInteger _indexFlag;
+  BOOL _animateTabBarItem;
+}
 
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations {
   return [self supportedControllerOrientations];
@@ -87,6 +90,11 @@
     {
       UIColor *color = tabBarBackgroundColor != (id)[NSNull null] ? [RCTConvert UIColor:tabBarBackgroundColor] : nil;
       self.tabBar.barTintColor = color;
+    }
+    
+    NSNumber *animateTabBarItem = tabsStyle[@"animateTabBarItem"];
+    if (animateTabBarItem && animateTabBarItem.boolValue) {
+      _animateTabBarItem = YES;
     }
   }
 
@@ -273,7 +281,7 @@
   }
 }
 
-+(void)sendScreenTabChangedEvent:(UIViewController*)viewController {
++ (void)sendScreenTabChangedEvent:(UIViewController*)viewController {
   if ([viewController.view isKindOfClass:[RCTRootView class]]){
     RCTRootView *rootView = (RCTRootView *)viewController.view;
     
@@ -297,5 +305,15 @@
   }
 }
 
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+  if (_animateTabBarItem) {
+    NSInteger index = [tabBar.items indexOfObject:item];
+    if (_indexFlag != index) {
+      [tabBar rcc_animateIconWithIndex:index];
+      
+      _indexFlag = index;
+    }
+  }
+}
 
 @end

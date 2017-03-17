@@ -49,7 +49,10 @@ Navigation.startTabBasedApp({
     left: {
       screen: 'example.SideMenu'
     }
-  }
+  },
+  tabsStyle: {
+    animateTabBarItem: false,
+  },
 });
 //Navigation.startSingleScreenApp({
 //  screen: {

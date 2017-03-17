@@ -9,7 +9,9 @@
 #import "UITabBar+RCCBadge.h"
 #import <objc/runtime.h>
 
-static const CGFloat kBadgeDotViewDimension = 10;
+static const CGFloat kBadgeDotViewDimension = 8;
+static const CGFloat kBadgeDotOffset = 2;
+
 static const int kBadgeDotMark;
 
 @interface RCCTabBarBadgeDotView : UIView
@@ -24,6 +26,7 @@ static const int kBadgeDotMark;
     if (self) {
         self.layer.masksToBounds = YES;
         self.layer.cornerRadius = frame.size.width / 2.0;
+        self.backgroundColor = [UIColor redColor];
     }
     return self;
 }
@@ -72,8 +75,15 @@ static const int kBadgeDotMark;
     UIView *tabBarButton = tabbarbuttonArray[index];
     UIImageView *tabBarIcon = tabBarButton.subviews.firstObject;
     
-    [tabBarIcon addSubview:badgeDotView];
-    badgeDotView.center = CGPointMake(tabBarIcon.frame.size.width - kBadgeDotViewDimension / 2.0, -kBadgeDotViewDimension / 2.0);
+    [self addSubview:badgeDotView];
+    
+    CGPoint position = CGPointMake(tabBarIcon.frame.size.width - kBadgeDotViewDimension / 2.0 + kBadgeDotOffset, kBadgeDotViewDimension / 2.0 - kBadgeDotOffset);
+    badgeDotView.center = [self convertPoint:position fromView:tabBarIcon];
+    
+    if ([item respondsToSelector:@selector(badgeColor)]) {
+        UIColor *badgeColor = [item badgeColor];
+        badgeDotView.backgroundColor = badgeColor ?: [UIColor redColor];
+    }
     
     objc_setAssociatedObject(item, &kBadgeDotMark, badgeDotView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }

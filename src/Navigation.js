@@ -28,7 +28,7 @@ function _registerComponentNoRedux(screenID, generator) {
     if (!InternalComponent) {
       console.error(`Navigation: ${screenID} registration result is 'undefined'`);
     }
-    
+
     return class extends Screen {
       static navigatorStyle = InternalComponent.navigatorStyle || {};
       static navigatorButtons = InternalComponent.navigatorButtons || {};
@@ -151,7 +151,8 @@ function handleDeepLink(params = {}) {
   if (!params.link) return;
   const event = {
     type: 'DeepLink',
-    link: params.link
+    // link: params.link
+    ...params,
   };
   for (let i in _allNavigatorEventHandlers) {
     _allNavigatorEventHandlers[i](event);

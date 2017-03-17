@@ -139,3 +139,7 @@ static navigatorStyle = {
 ```
 
 If `screenTransparent` is true, it will be presented in the current context.
+
+#### 10. Deep link support custom params
+
+Deep link only support `link` param, but I need some other params, so I not need to encode params to `link`, then decode params out.

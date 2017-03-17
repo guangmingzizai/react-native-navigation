@@ -8,6 +8,11 @@ import {
 } from 'react-native';
 
 export default class ModalScreen extends Component {
+  static navigatorStyle = {
+    screenTransparent: true,
+    screenBackgroundColor: '#FFFFFFEE',
+  }
+
   static navigatorButtons = {
     leftButtons: [{
       title: 'Close',
@@ -70,7 +75,7 @@ export default class ModalScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'transparent',
     padding: 20
   },
   button: {

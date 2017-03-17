@@ -327,13 +327,19 @@ RCT_EXPORT_METHOD(
     }
     
     if (layout[@"props"] && [layout[@"props"] isKindOfClass:[NSDictionary class]] && layout[@"props"][@"style"] && [layout[@"props"][@"style"] isKindOfClass: [NSDictionary class]]) {
-        
         NSDictionary *style = layout[@"props"][@"style"];
+        
         if (style[@"modalPresentationStyle"] && [style[@"modalPresentationStyle"] isKindOfClass:[NSString class]]) {
             
             NSString *presentationStyle = style[@"modalPresentationStyle"];
             UIModalPresentationStyle modalPresentationStyle = [RCTConvert UIModalPresentationStyle:presentationStyle];
             controller.modalPresentationStyle = modalPresentationStyle;
+        }
+        
+        NSNumber *screenTransparent = style[@"screenTransparent"];
+        if (screenTransparent && screenTransparent.boolValue) {
+            controller.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+            controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         }
     }
     

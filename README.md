@@ -129,3 +129,13 @@ Default style is:
     }
 ```
 
+#### 9. Support transparent modal
+
+```javascript
+static navigatorStyle = {
+    screenTransparent: true,
+    screenBackgroundColor: '#FFFFFFEE',
+  }
+```
+
+If `screenTransparent` is true, it will be presented in the current context.

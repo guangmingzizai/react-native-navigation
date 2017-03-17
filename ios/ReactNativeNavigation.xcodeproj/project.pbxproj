@@ -12,6 +12,7 @@
 		26AFF3F51D7EEE2400CBA211 /* RCCTitleViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AFF3F41D7EEE2400CBA211 /* RCCTitleViewHelper.m */; };
 		6C0347041E7BA47800B7540C /* UITabBar+RCCBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0347031E7BA47800B7540C /* UITabBar+RCCBadge.m */; };
 		6C0347491E7BCD1A00B7540C /* UITabBar+RCCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0347481E7BCD1A00B7540C /* UITabBar+RCCAnimation.m */; };
+		6C0347651E7BDD2C00B7540C /* RCCImageTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0347641E7BDD2C00B7540C /* RCCImageTabBarItem.m */; };
 		CC84A19E1C1A0C4E00B3A6A2 /* RCCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1941C1A0C4E00B3A6A2 /* RCCManager.m */; };
 		CC84A19F1C1A0C4E00B3A6A2 /* RCCManagerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1961C1A0C4E00B3A6A2 /* RCCManagerModule.m */; };
 		CC84A1A01C1A0C4E00B3A6A2 /* RCCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1981C1A0C4E00B3A6A2 /* RCCNavigationController.m */; };
@@ -61,6 +62,8 @@
 		6C0347031E7BA47800B7540C /* UITabBar+RCCBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RCCBadge.m"; sourceTree = "<group>"; };
 		6C0347471E7BCD1A00B7540C /* UITabBar+RCCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+RCCAnimation.h"; sourceTree = "<group>"; };
 		6C0347481E7BCD1A00B7540C /* UITabBar+RCCAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RCCAnimation.m"; sourceTree = "<group>"; };
+		6C0347631E7BDD2C00B7540C /* RCCImageTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCImageTabBarItem.h; sourceTree = "<group>"; };
+		6C0347641E7BDD2C00B7540C /* RCCImageTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCImageTabBarItem.m; sourceTree = "<group>"; };
 		CC84A1931C1A0C4E00B3A6A2 /* RCCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCManager.h; sourceTree = "<group>"; };
 		CC84A1941C1A0C4E00B3A6A2 /* RCCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = RCCManager.m; sourceTree = "<group>"; tabWidth = 2; };
 		CC84A1951C1A0C4E00B3A6A2 /* RCCManagerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCManagerModule.h; sourceTree = "<group>"; };
@@ -146,6 +149,15 @@
 			path = RCCTabBar;
 			sourceTree = "<group>";
 		};
+		6C0347621E7BDD1200B7540C /* RCCImageTabBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				6C0347631E7BDD2C00B7540C /* RCCImageTabBarItem.h */,
+				6C0347641E7BDD2C00B7540C /* RCCImageTabBarItem.m */,
+			);
+			path = RCCImageTabBarItem;
+			sourceTree = "<group>";
+		};
 		D85082BB1CBCF42400FDB961 /* RCCDrawerController */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +226,7 @@
 		D8AFADB41BEE6F3F00A4592D = {
 			isa = PBXGroup;
 			children = (
+				6C0347621E7BDD1200B7540C /* RCCImageTabBarItem */,
 				6C0347011E7BA45100B7540C /* RCCTabBar */,
 				D8D779951D04B7180050CFEA /* Helpers */,
 				260804D51CE0D7090094DBA1 /* RCCToolBar */,
@@ -317,6 +330,7 @@
 				D85082EA1CBCF54200FDB961 /* TheSidebarController.m in Sources */,
 				CC84A1A01C1A0C4E00B3A6A2 /* RCCNavigationController.m in Sources */,
 				D83514F61D29719A00D53758 /* RCCNotification.m in Sources */,
+				6C0347651E7BDD2C00B7540C /* RCCImageTabBarItem.m in Sources */,
 				6C0347491E7BCD1A00B7540C /* UITabBar+RCCAnimation.m in Sources */,
 				CC84A19F1C1A0C4E00B3A6A2 /* RCCManagerModule.m in Sources */,
 				26AFF3F51D7EEE2400CBA211 /* RCCTitleViewHelper.m in Sources */,

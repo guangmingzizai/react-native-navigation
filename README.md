@@ -71,3 +71,16 @@ this.props.navigator.setTabBadge({
 
 *If badge exists, the badgeDot is hidden.*
 
+#### 2. Add animation to tabBarItem icon
+
+```javascript
+tabsStyle: {
+    animateTabBarItem: true,
+}
+```
+
+*default is false*
+
+#### 3. Support tabBarItem no title
+
+If the title of tabBarItem is empty, it will not show title.

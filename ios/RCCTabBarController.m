@@ -7,6 +7,7 @@
 #import "UIViewController+Rotation.h"
 #import "UITabBar+RCCBadge.h"
 #import "UITabBar+RCCAnimation.h"
+#import "RCCImageTabBarItem.h"
 
 @interface RCTUIManager ()
 
@@ -131,7 +132,11 @@
     id selectedIcon = tabItemLayout[@"props"][@"selectedIcon"];
     if (selectedIcon) iconImageSelected = [RCTConvert UIImage:selectedIcon];
 
-    viewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:iconImage tag:0];
+    if (title == nil || title == [NSNull null] || title.length == 0) {
+      viewController.tabBarItem = [[RCCImageTabBarItem alloc] initWithTitle:title image:iconImage tag:0];
+    } else {
+      viewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:iconImage tag:0];
+    }
     viewController.tabBarItem.accessibilityIdentifier = tabItemLayout[@"props"][@"testID"];
     viewController.tabBarItem.selectedImage = iconImageSelected;
     

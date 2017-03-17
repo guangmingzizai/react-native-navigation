@@ -5,6 +5,7 @@
 #import "RCTHelpers.h"
 #import <React/RCTUIManager.h>
 #import "UIViewController+Rotation.h"
+#import "UITabBar+RCCBadge.h"
 
 @interface RCTUIManager ()
 
@@ -145,10 +146,20 @@
     if (badge == nil || [badge isEqual:[NSNull null]])
     {
       viewController.tabBarItem.badgeValue = nil;
+      
+      NSNumber *showBadgeDot = tabItemLayout[@"props"][@"showBadgeDot"];
+      if (showBadgeDot && showBadgeDot.boolValue) {
+        [self.tabBar rcc_setBadgeDotHidden:NO forItem:viewController.tabBarItem];
+      } else {
+        [self.tabBar rcc_setBadgeDotHidden:YES forItem:viewController.tabBarItem];
+      }
     }
     else
     {
       viewController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%@", badge];
+      
+      // if badge exists, hide badgeDot
+      [self.tabBar rcc_setBadgeDotHidden:YES forItem:viewController.tabBarItem];
     }
 
     [viewControllers addObject:viewController];
@@ -191,10 +202,20 @@
       if (badge == nil || [badge isEqual:[NSNull null]])
       {
         viewController.tabBarItem.badgeValue = nil;
+        
+        NSNumber *showBadgeDot = actionParams[@"showBadgeDot"];
+        if (showBadgeDot && showBadgeDot.boolValue) {
+          [self.tabBar rcc_setBadgeDotHidden:NO forItem:viewController.tabBarItem];
+        } else {
+          [self.tabBar rcc_setBadgeDotHidden:YES forItem:viewController.tabBarItem];
+        }
       }
       else
       {
         viewController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%@", badge];
+        
+        // if badge exists, hide badgeDot
+        [self.tabBar rcc_setBadgeDotHidden:YES forItem:viewController.tabBarItem];
       }
     }
   }

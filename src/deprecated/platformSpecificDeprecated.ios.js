@@ -360,13 +360,15 @@ function navigatorSetTabBadge(navigator, params) {
   if (params.tabIndex || params.tabIndex === 0) {
     Controllers.TabBarControllerIOS(controllerID + '_tabs').setBadge({
       tabIndex: params.tabIndex,
-      badge: params.badge
+      badge: params.badge,
+      showBadgeDot: params.showBadgeDot,
     });
   } else {
     Controllers.TabBarControllerIOS(controllerID + '_tabs').setBadge({
       contentId: navigator.navigatorID,
       contentType: 'NavigationControllerIOS',
-      badge: params.badge
+      badge: params.badge,
+      showBadgeDot: params.showBadgeDot,
     });
   }
 }
@@ -524,7 +526,7 @@ function showInAppNotification(params) {
     navigatorEventID,
     navigatorID
   };
-  
+
   savePassProps(params);
 
   let args = {

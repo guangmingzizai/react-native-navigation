@@ -93,7 +93,7 @@ export default class SecondTabScreen extends Component {
   }
   onSetTabBadgePress() {
     this.props.navigator.setTabBadge({
-      badge: 12
+      badge: 12,
     });
   }
   onToggleTabsPress() {

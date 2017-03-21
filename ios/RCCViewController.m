@@ -10,6 +10,7 @@
 #import "RCCExternalViewControllerProtocol.h"
 #import "RCTHelpers.h"
 #import "RCCTitleViewHelper.h"
+#import "UIImage+RCCColor.h"
 
 NSString* const RCCViewControllerCancelReactTouchesNotification = @"RCCViewControllerCancelReactTouchesNotification";
 
@@ -240,13 +241,27 @@ const NSInteger TRANSPARENT_NAVBAR_TAG = 78264803;
     }
     
     NSString *navBarBackgroundColor = self.navigatorStyle[@"navBarBackgroundColor"];
-    if (navBarBackgroundColor) {
-        
+    if (navBarBackgroundColor)
+    {
         UIColor *color = navBarBackgroundColor != (id)[NSNull null] ? [RCTConvert UIColor:navBarBackgroundColor] : nil;
-        viewController.navigationController.navigationBar.barTintColor = color;
-        
-    } else {
+        if (color) {
+          [viewController.navigationController.navigationBar setBackgroundImage:[UIImage rcc_imageWithColor:color size:CGSizeMake([UIScreen mainScreen].bounds.size.width * [UIScreen mainScreen].scale, 64)] forBarMetrics:UIBarMetricsDefault];
+        } else {
+          viewController.navigationController.navigationBar.barTintColor = color;
+        }
+    }
+    else
+    {
         viewController.navigationController.navigationBar.barTintColor = nil;
+    }
+    
+    NSString *hairlineColor = self.navigatorStyle[@"hairlineColor"];
+    if (hairlineColor)
+    {
+        UIColor *color = hairlineColor != (id)[NSNull null] ? [RCTConvert UIColor:hairlineColor] : nil;
+        if (color) {
+            viewController.navigationController.navigationBar.shadowImage = [UIImage rcc_imageWithColor:color size:CGSizeMake([UIScreen mainScreen].bounds.size.width * [UIScreen mainScreen].scale, 1)];
+        }
     }
 
     NSMutableDictionary *titleTextAttributes = [RCTHelpers textAttributesFromDictionary:self.navigatorStyle withPrefix:@"navBarText" baseFont:[UIFont boldSystemFontOfSize:17]];

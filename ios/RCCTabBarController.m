@@ -164,7 +164,11 @@
     }
     UIImage *iconImageSelected = nil;
     id selectedIcon = tabItemLayout[@"props"][@"selectedIcon"];
-    if (selectedIcon) iconImageSelected = [RCTConvert UIImage:selectedIcon];
+    if (selectedIcon) {
+      iconImageSelected = [RCTConvert UIImage:selectedIcon];
+    } else {
+      iconImageSelected = [RCTConvert UIImage:icon];
+    }
 
     if (title == nil || title == [NSNull null] || title.length == 0) {
       viewController.tabBarItem = [[RCCImageTabBarItem alloc] initWithTitle:title image:iconImage tag:0];

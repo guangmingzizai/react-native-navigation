@@ -143,3 +143,18 @@ If `screenTransparent` is true, it will be presented in the current context.
 #### 10. Deep link support custom params
 
 Deep link only support `link` param, but I need some other params, so I not need to encode params to `link`, then decode params out.
+
+#### 11. Support change navigation bar hairline color
+
+```javascript
+static navigatorStyle = {
+  navBarBackgroundColor: '#FFFFFF',
+    hairlineColor: '#E8E8E8',
+  }
+const transparentNavigatorStyle = {
+  navBarBackgroundColor: 'transparent',
+  hairlineColor: 'transparent',
+}
+```
+
+*Warning: transparent navigator must set background and hairline color to `transparent`*

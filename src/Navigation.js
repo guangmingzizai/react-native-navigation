@@ -148,11 +148,14 @@ function clearEventHandler(navigatorEventID) {
 }
 
 function handleDeepLink(params = {}) {
-  if (!params.link) return;
+  const { link, payload } = params;
+
+  if (!link) return;
+
   const event = {
     type: 'DeepLink',
-    // link: params.link
-    ...params,
+    link,
+    ...(payload ? { payload } : {})
   };
   for (let i in _allNavigatorEventHandlers) {
     _allNavigatorEventHandlers[i](event);

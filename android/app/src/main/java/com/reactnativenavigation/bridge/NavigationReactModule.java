@@ -10,12 +10,14 @@ import com.facebook.react.bridge.ReadableMap;
 import com.reactnativenavigation.controllers.NavigationCommandsHandler;
 import com.reactnativenavigation.params.ContextualMenuParams;
 import com.reactnativenavigation.params.FabParams;
+import com.reactnativenavigation.params.LightBoxParams;
 import com.reactnativenavigation.params.SlidingOverlayParams;
 import com.reactnativenavigation.params.SnackbarParams;
 import com.reactnativenavigation.params.TitleBarButtonParams;
 import com.reactnativenavigation.params.TitleBarLeftButtonParams;
 import com.reactnativenavigation.params.parsers.ContextualMenuParamsParser;
 import com.reactnativenavigation.params.parsers.FabParamsParser;
+import com.reactnativenavigation.params.parsers.LightBoxParamsParser;
 import com.reactnativenavigation.params.parsers.SlidingOverlayParamsParser;
 import com.reactnativenavigation.params.parsers.SnackbarParamsParser;
 import com.reactnativenavigation.params.parsers.TitleBarButtonParamsParser;
@@ -50,8 +52,6 @@ public class NavigationReactModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void startApp(final ReadableMap params) {
-        boolean portraitOnlyMode = false;
-        boolean landscapeOnlyMode = false;
         NavigationCommandsHandler.startApp(BundleConverter.toBundle(params));
     }
 
@@ -97,6 +97,11 @@ public class NavigationReactModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void setScreenStyle(String screenInstanceId, ReadableMap style) {
+        NavigationCommandsHandler.setScreenStyle(screenInstanceId, BundleConverter.toBundle(style));
+    }
+
+    @ReactMethod
     public void setBottomTabBadgeByIndex(Integer index, String badge) {
         NavigationCommandsHandler.setBottomTabBadgeByIndex(index, badge);
     }
@@ -114,6 +119,16 @@ public class NavigationReactModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void selectBottomTabByNavigatorId(String navigatorId) {
         NavigationCommandsHandler.selectBottomTabByNavigatorId(navigatorId);
+    }
+
+    @ReactMethod
+    public void selectTopTabByTabIndex(String screenInstanceId, int index) {
+        NavigationCommandsHandler.selectTopTabByTabIndex(screenInstanceId, index);
+    }
+
+    @ReactMethod
+    public void selectTopTabByScreen(String screenInstanceId) {
+        NavigationCommandsHandler.selectTopTabByScreen(screenInstanceId);
     }
 
     @ReactMethod
@@ -167,6 +182,17 @@ public class NavigationReactModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void showModal(final ReadableMap params) {
         NavigationCommandsHandler.showModal(BundleConverter.toBundle(params));
+    }
+
+    @ReactMethod
+    public void showLightBox(final ReadableMap params) {
+        LightBoxParams lbp = new LightBoxParamsParser(BundleConverter.toBundle(params)).parse();
+        NavigationCommandsHandler.showLightBox(lbp);
+    }
+
+    @ReactMethod
+    public void dismissLightBox() {
+        NavigationCommandsHandler.dismissLightBox();
     }
 
     @ReactMethod

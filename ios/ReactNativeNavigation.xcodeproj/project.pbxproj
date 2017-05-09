@@ -10,10 +10,10 @@
 		260804DB1CE0D9D20094DBA1 /* RCCToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 260804DA1CE0D9D20094DBA1 /* RCCToolBar.m */; };
 		261108801E6C495400BF5D98 /* UIViewController+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2611087F1E6C495400BF5D98 /* UIViewController+Rotation.m */; };
 		26714EAC1EB0E9D3009F4D52 /* RCCCustomTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26714EAB1EB0E9D3009F4D52 /* RCCCustomTitleView.m */; };
-		26AFF3F51D7EEE2400CBA211 /* RCCTitleViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AFF3F41D7EEE2400CBA211 /* RCCTitleViewHelper.m */; };
 		6C0347041E7BA47800B7540C /* UITabBar+RCCBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0347031E7BA47800B7540C /* UITabBar+RCCBadge.m */; };
 		6C0347491E7BCD1A00B7540C /* UITabBar+RCCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0347481E7BCD1A00B7540C /* UITabBar+RCCAnimation.m */; };
 		6C0347651E7BDD2C00B7540C /* RCCImageTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0347641E7BDD2C00B7540C /* RCCImageTabBarItem.m */; };
+		6C0B15401EB782A900B6091D /* RCCTitleViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B153F1EB782A900B6091D /* RCCTitleViewHelper.m */; };
 		6CBA65F81E80D566000823EF /* UIImage+RCCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBA65F71E80D566000823EF /* UIImage+RCCColor.m */; };
 		CC84A19E1C1A0C4E00B3A6A2 /* RCCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1941C1A0C4E00B3A6A2 /* RCCManager.m */; };
 		CC84A19F1C1A0C4E00B3A6A2 /* RCCManagerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1961C1A0C4E00B3A6A2 /* RCCManagerModule.m */; };
@@ -60,14 +60,14 @@
 		2611087F1E6C495400BF5D98 /* UIViewController+Rotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Rotation.m"; path = "../UIViewController+Rotation.m"; sourceTree = "<group>"; };
 		26714EAA1EB0E9D3009F4D52 /* RCCCustomTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCCustomTitleView.h; sourceTree = "<group>"; };
 		26714EAB1EB0E9D3009F4D52 /* RCCCustomTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCCustomTitleView.m; sourceTree = "<group>"; };
-		26AFF3F31D7EEE2400CBA211 /* RCCTitleViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCTitleViewHelper.h; sourceTree = "<group>"; };
-		26AFF3F41D7EEE2400CBA211 /* RCCTitleViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCTitleViewHelper.m; sourceTree = "<group>"; };
 		6C0347021E7BA47800B7540C /* UITabBar+RCCBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+RCCBadge.h"; sourceTree = "<group>"; };
 		6C0347031E7BA47800B7540C /* UITabBar+RCCBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RCCBadge.m"; sourceTree = "<group>"; };
 		6C0347471E7BCD1A00B7540C /* UITabBar+RCCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+RCCAnimation.h"; sourceTree = "<group>"; };
 		6C0347481E7BCD1A00B7540C /* UITabBar+RCCAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RCCAnimation.m"; sourceTree = "<group>"; };
 		6C0347631E7BDD2C00B7540C /* RCCImageTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCImageTabBarItem.h; sourceTree = "<group>"; };
 		6C0347641E7BDD2C00B7540C /* RCCImageTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCImageTabBarItem.m; sourceTree = "<group>"; };
+		6C0B153E1EB782A900B6091D /* RCCTitleViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCTitleViewHelper.h; sourceTree = "<group>"; };
+		6C0B153F1EB782A900B6091D /* RCCTitleViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCTitleViewHelper.m; sourceTree = "<group>"; };
 		6CBA65F61E80D566000823EF /* UIImage+RCCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RCCColor.h"; sourceTree = "<group>"; };
 		6CBA65F71E80D566000823EF /* UIImage+RCCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RCCColor.m"; sourceTree = "<group>"; };
 		CC84A1931C1A0C4E00B3A6A2 /* RCCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCManager.h; sourceTree = "<group>"; };
@@ -240,8 +240,6 @@
 				CC84A1941C1A0C4E00B3A6A2 /* RCCManager.m */,
 				26714EAA1EB0E9D3009F4D52 /* RCCCustomTitleView.h */,
 				26714EAB1EB0E9D3009F4D52 /* RCCCustomTitleView.m */,
-				26AFF3F31D7EEE2400CBA211 /* RCCTitleViewHelper.h */,
-				26AFF3F41D7EEE2400CBA211 /* RCCTitleViewHelper.m */,
 				CC84A1951C1A0C4E00B3A6A2 /* RCCManagerModule.h */,
 				CC84A1961C1A0C4E00B3A6A2 /* RCCManagerModule.m */,
 				CC84A1971C1A0C4E00B3A6A2 /* RCCNavigationController.h */,
@@ -270,6 +268,8 @@
 		D8D779951D04B7180050CFEA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				6C0B153E1EB782A900B6091D /* RCCTitleViewHelper.h */,
+				6C0B153F1EB782A900B6091D /* RCCTitleViewHelper.m */,
 				2611087E1E6C495400BF5D98 /* UIViewController+Rotation.h */,
 				2611087F1E6C495400BF5D98 /* UIViewController+Rotation.m */,
 				6CBA65F61E80D566000823EF /* UIImage+RCCColor.h */,
@@ -343,9 +343,9 @@
 				6C0347651E7BDD2C00B7540C /* RCCImageTabBarItem.m in Sources */,
 				6C0347491E7BCD1A00B7540C /* UITabBar+RCCAnimation.m in Sources */,
 				CC84A19F1C1A0C4E00B3A6A2 /* RCCManagerModule.m in Sources */,
-				26AFF3F51D7EEE2400CBA211 /* RCCTitleViewHelper.m in Sources */,
 				D8D779981D04B7180050CFEA /* RCTHelpers.m in Sources */,
 				D85082E81CBCF54200FDB961 /* SidebarLuvocracyAnimation.m in Sources */,
+				6C0B15401EB782A900B6091D /* RCCTitleViewHelper.m in Sources */,
 				D85082E31CBCF54200FDB961 /* SidebarAirbnbAnimation.m in Sources */,
 				6CBA65F81E80D566000823EF /* UIImage+RCCColor.m in Sources */,
 				D84813191C8C5EB700051BAF /* RCCLightBox.m in Sources */,

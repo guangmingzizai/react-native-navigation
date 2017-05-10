@@ -265,6 +265,10 @@ NSString const *CALLBACK_ASSOCIATED_ID = @"RCCNavigationController.CALLBACK_ASSO
   self.interactivePopGestureRecognizer.delegate = nil;
 }
 
+- (void)_onTapBackButton {
+  [self popViewControllerAnimated:YES];
+}
+
 -(void)onButtonPress:(UIBarButtonItem*)barButtonItem
 {
   NSString *callbackId = objc_getAssociatedObject(barButtonItem, &CALLBACK_ASSOCIATED_KEY);

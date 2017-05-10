@@ -135,6 +135,8 @@ NSString const *CALLBACK_ASSOCIATED_ID = @"RCCNavigationController.CALLBACK_ASSO
     if (leftButtons)
     {
       [self setButtons:leftButtons viewController:viewController side:@"left" animated:NO];
+    } else {
+      [self _setDefaultBackBarButton:viewController];
     }
     
     NSArray *rightButtons = actionParams[@"rightButtons"];
@@ -250,6 +252,17 @@ NSString const *CALLBACK_ASSOCIATED_ID = @"RCCNavigationController.CALLBACK_ASSO
       [parent updateStyle];
     }
   }
+}
+
+- (void)_setDefaultBackBarButton:(UIViewController *)viewController {
+  UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc]
+                                     initWithImage:[UIImage imageNamed:@"nav_back_icon"]
+                                     style:UIBarButtonItemStylePlain
+                                     target:self
+                                     action:@selector(_onTapBackButton)];
+  [viewController.navigationItem setLeftBarButtonItems:@[ backButtonItem ]];
+  
+  self.interactivePopGestureRecognizer.delegate = nil;
 }
 
 -(void)onButtonPress:(UIBarButtonItem*)barButtonItem

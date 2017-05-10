@@ -293,21 +293,21 @@ const NSInteger TRANSPARENT_NAVBAR_TAG = 78264803;
       rightNavButtonTextAttributes.allKeys.count > 0
       ) {
     
-    for (UIBarButtonItem *item in viewController.navigationItem.leftBarButtonItems) {
-      [item setTitleTextAttributes:navButtonTextAttributes forState:UIControlStateNormal];
-      
-      if (leftNavButtonTextAttributes.allKeys.count > 0) {
-        [item setTitleTextAttributes:leftNavButtonTextAttributes forState:UIControlStateNormal];
-      }
-    }
-    
-    for (UIBarButtonItem *item in viewController.navigationItem.rightBarButtonItems) {
-      [item setTitleTextAttributes:navButtonTextAttributes forState:UIControlStateNormal];
-      
-      if (rightNavButtonTextAttributes.allKeys.count > 0) {
-        [item setTitleTextAttributes:rightNavButtonTextAttributes forState:UIControlStateNormal];
-      }
-    }
+//    for (UIBarButtonItem *item in viewController.navigationItem.leftBarButtonItems) {
+//      [item setTitleTextAttributes:navButtonTextAttributes forState:UIControlStateNormal];
+//      
+//      if (leftNavButtonTextAttributes.allKeys.count > 0) {
+//        [item setTitleTextAttributes:leftNavButtonTextAttributes forState:UIControlStateNormal];
+//      }
+//    }
+//    
+//    for (UIBarButtonItem *item in viewController.navigationItem.rightBarButtonItems) {
+//      [item setTitleTextAttributes:navButtonTextAttributes forState:UIControlStateNormal];
+//      
+//      if (rightNavButtonTextAttributes.allKeys.count > 0) {
+//        [item setTitleTextAttributes:rightNavButtonTextAttributes forState:UIControlStateNormal];
+//      }
+//    }
     
     // At the moment, this seems to be the only thing that gets the back button correctly
     [navButtonTextAttributes removeObjectForKey:NSForegroundColorAttributeName];
